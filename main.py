@@ -31,9 +31,9 @@ def scan_brave_folder(brave_config_folder):
     return profiles
 
 
-class DemoExtension(Extension):
+class BraveProfilesExtension(Extension):
     def __init__(self):
-        super(DemoExtension, self).__init__()
+        super(BraveProfilesExtension, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
         self.subscribe(ItemEnterEvent, ItemEnterEventListener())
 
@@ -86,4 +86,4 @@ class ItemEnterEventListener(EventListener):
 
 
 if __name__ == '__main__':
-    DemoExtension().run()
+    BraveProfilesExtension().run()

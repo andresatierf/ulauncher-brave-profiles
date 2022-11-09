@@ -2,7 +2,7 @@
   "required_api_version": "^2.0.0",
   "name": "Brave Profiles",
   "description": "Provides an easy way to launch brave with different user profiles",
-  "developer_name": "Andre Freitas",
+  "developer_name": "Andre Freitas <andrecfreitas58@gmail.com>",
   "icon": "images/icon.png",
   "options": {
     "query_debounce": 0.1
@@ -13,21 +13,21 @@
       "type": "keyword",
       "name": "Brave Profile",
       "description": "Keyword to invoke this extension",
-      "default_value": "br"
+      "default_value": "brave"
     },
     {
       "id": "brave_folder",
       "type": "input",
       "name": "Brave Configuration Folder",
       "description": "Select the brave configuration folder, which contains all profiles.",
-      "default_value": "~/.config/google-chrome"
+      "default_value": "~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser/"
     },
     {
       "id": "brave_cmd",
       "type": "input",
       "name": "Brave Executable",
-      "description": "Insert the executable name for Brave.",
-      "default_value": "brave"
+      "description": "Insert the executable name for Brave. Depends if it was installed via snap or flatpak",
+      "default_value": "/var/lib/flatpak/app/com.brave.Browser/current/active/export/bin/com.brave.Browser"
     }
   ]
 }
