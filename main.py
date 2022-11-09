@@ -54,15 +54,6 @@ class KeywordQueryEventListener(EventListener):
 
         # Create launcher entries
         entries = []
-        entries.append(ExtensionResultItem(
-            icon='images/icon.png',
-            name='Incognito',
-            description='Launch browser in incognito mode',
-            on_enter=ExtensionCustomAction({
-                'brave_cmd': extension.preferences['brave_cmd'],
-                'opt': ['--incognito']
-            }, keep_app_open=True)
-        ))
         for folder in profiles:
             entries.append(ExtensionResultItem(
                 icon='images/icon.png',
@@ -73,6 +64,15 @@ class KeywordQueryEventListener(EventListener):
                     'opt': ['--profile-directory={0}'.format(folder)]
                 }, keep_app_open=True)
             ))
+        entries.append(ExtensionResultItem(
+            icon='images/incognito.png',
+            name='Incognito',
+            description='Launch browser in incognito mode',
+            on_enter=ExtensionCustomAction({
+                'brave_cmd': extension.preferences['brave_cmd'],
+                'opt': ['--incognito']
+            }, keep_app_open=True)
+        ))
         return RenderResultListAction(entries)
 
 
