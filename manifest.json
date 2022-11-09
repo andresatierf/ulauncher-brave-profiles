@@ -1,8 +1,8 @@
 {
   "required_api_version": "^2.0.0",
-  "name": "Chrome Profiles",
-  "description": "Provides an easy way to launch chrome with different user profiles",
-  "developer_name": "Alessandro Racheli <alessandroracheli@gmail.com>",
+  "name": "Brave Profiles",
+  "description": "Provides an easy way to launch brave with different user profiles",
+  "developer_name": "Andre Freitas",
   "icon": "images/icon.png",
   "options": {
     "query_debounce": 0.1
@@ -11,23 +11,23 @@
     {
       "id": "keyword",
       "type": "keyword",
-      "name": "Chrome Profile",
+      "name": "Brave Profile",
       "description": "Keyword to invoke this extension",
-      "default_value": "cp"
+      "default_value": "br"
     },
     {
-      "id": "chrome_folder",
+      "id": "brave_folder",
       "type": "input",
-      "name": "Chrome Configuration Folder",
-      "description": "Select the chrome configuration folder, which contains all profiles.",
+      "name": "Brave Configuration Folder",
+      "description": "Select the brave configuration folder, which contains all profiles.",
       "default_value": "~/.config/google-chrome"
     },
     {
-      "id": "chrome_cmd",
+      "id": "brave_cmd",
       "type": "input",
-      "name": "Chrome Executable",
-      "description": "Insert the executable name for Google Chrome. Usually google-chrome-stable or google-chrome.",
-      "default_value": "google-chrome-stable"
+      "name": "Brave Executable",
+      "description": "Insert the executable name for Brave.",
+      "default_value": "brave"
     }
   ]
 }
