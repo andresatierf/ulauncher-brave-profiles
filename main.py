@@ -54,6 +54,15 @@ class KeywordQueryEventListener(EventListener):
 
         # Create launcher entries
         entries = []
+        entries.append(ExtensionResultItem(
+            icon='images/icon.png',
+            name='Incognito',
+            description='Launch browser in incognito mode',
+            on_enter=ExtensionCustomAction({
+                'chrome_cmd': extension.preferences['chrome_cmd'],
+                'opt': ['--incognito']
+            }, keep_app_open=True)
+        ))
         for folder in profiles:
             entries.append(ExtensionResultItem(
                 icon='images/icon.png',
