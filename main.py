@@ -62,7 +62,7 @@ class KeywordQueryEventListener(EventListener):
                 on_enter=ExtensionCustomAction({
                     'brave_cmd': extension.preferences['brave_cmd'],
                     'opt': ['--profile-directory={0}'.format(folder)]
-                }, keep_app_open=True)
+                }, keep_app_open=False)
             ))
         entries.append(ExtensionResultItem(
             icon='images/incognito.png',
@@ -71,7 +71,7 @@ class KeywordQueryEventListener(EventListener):
             on_enter=ExtensionCustomAction({
                 'brave_cmd': extension.preferences['brave_cmd'],
                 'opt': ['--incognito']
-            }, keep_app_open=True)
+            }, keep_app_open=False)
         ))
         return RenderResultListAction(entries)
 
